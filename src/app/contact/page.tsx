@@ -470,7 +470,7 @@ export default function ContactPage() {
           <p className="text-text-muted text-center mb-8">
             Quick answers to common questions
           </p>
-          <Accordion type="single" className="space-y-3">
+           <Accordion className="space-y-3">
             {faqs.map((faq, index) => (
               <div key={index} className="faq-item">
                 <AccordionItem className="bg-bg-base border border-border-default rounded-xl px-4">
