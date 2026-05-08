@@ -184,9 +184,29 @@ function GlowingProfile() {
 
   return (
     <div ref={ref} className="profile-image relative">
-      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-primary-start to-accent-primary-end opacity-50 blur-xl" />
-      <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-accent-primary-start to-accent-primary-end flex items-center justify-center text-white text-3xl sm:text-4xl font-bold">
-        KO
+      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-primary-start to-accent-primary-end opacity-30 blur-2xl" />
+      <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden">
+        {/* Creative abstract avatar using CSS shapes */}
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-primary-start to-accent-primary-end opacity-90">
+          <div className="absolute inset-0 bg-gradient-to-r from-accent-primary-end/20 to-accent-primary-start/20" />
+          {/* Circuit-like pattern */}
+          <div className="absolute inset-0" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.15%22%3E%3Cpath d=%22M30 0a30 30 0 1 0 30 30A30.01 30.01 0 0 0 30 0zm0 46a16 16 0 1 1 16-16 15.99 15.99 0 0 1-16 16zm8-8a4 4 0 1 0-4 4 4 4 0 0 0 4-4zm-16 0a4 4 0 1 0-4 4 4 4 0 0 0 4-4zm0 16a4 4 0 1 0-4 4 4 4 0 0 0 4-4zm8-12a4 4 0 1 0 4-4 4 4 0 0 0-4 4zm-4-4a4 4 0 1 0 0-8 4 4 0 0 0 0 8z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'" }} />
+          {/* Central node */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-to-r from-accent-primary-start to-accent-primary-end rounded-full shadow-lg" />
+          {/* Connection lines */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2" style={{ 
+            backgroundImage: "url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%221.5%22%3E%3Cline x1=30 y1=10 x2=30 y2=50/%3E%3Cline x1=10 y1=30 x2=50 y2=30/%3E%3C/g%3E%3C/svg%3E')" }} 
+          />
+          {/* Pulsing dots */}
+          <div className="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent-primary-start rounded-full animate-pulse" />
+          <div className="absolute left-1/4 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent-primary-end rounded-full animate-pulse" style={{ animationDelay: '200ms' }} />
+          <div className="absolute right-1/4 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent-primary-start rounded-full animate-pulse" style={{ animationDelay: '400ms' }} />
+          <div className="absolute left-1/2 bottom-1/4 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-accent-primary-end rounded-full animate-pulse" style={{ animationDelay: '600ms' }} />
+        </div>
+        {/* Name initials with glow */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white font-bold">
+          <span className="text-2xl sm:text-3xl">KO</span>
+        </div>
       </div>
     </div>
   );
