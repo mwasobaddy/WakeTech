@@ -185,9 +185,9 @@ function GlowingProfile() {
   return (
     <div ref={ref} className="profile-image relative">
       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-primary-start to-accent-primary-end opacity-40 blur-xl" />
-      <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden">
+      <div className="relative w-full h-full rounded-full">
         <img 
-          src="https://placehold.co/600x600/1a1a1a/ffffff?text=Developer+Avatar&font=roboto" 
+          src="https://portifolio-9dy5.vercel.app/assets/hero-removebg-preview-3535e551.png" 
           alt="Developer Avatar" 
           className="w-full h-full object-cover"
         />
@@ -351,7 +351,7 @@ export default function AboutPage() {
                 Let&apos;s work together <Sparkles className="h-5 w-5" />
               </Link>
             </div>
-            <div className="profile-image flex justify-center lg:justify-end">
+            <div className="profile-image flex justify-center lg:justify-end h-full">
               <GlowingProfile />
             </div>
           </div>
